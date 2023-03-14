@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'EmpleadosApp';
+
+  constructor(private router: Router) {
+    // Redirigir a la página de inicio de sesión si la URL no coincide con ninguna ruta
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        if (!this.router.url.startsWith('/login') && !this.router.url.startsWith('/home')) {
+          this.router.navigate(['/login']);
+        }
+      }
+    });
+  }
 }
