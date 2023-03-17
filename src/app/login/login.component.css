@@ -1,0 +1,56 @@
+*{
+
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-login{
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  height: 400px;
+  width: 300px;
+  justify-content: center;
+  border-style: groove;
+  border-radius: 10%;
+
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+
+form > div {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+button:focus {
+  outline: none;
+}

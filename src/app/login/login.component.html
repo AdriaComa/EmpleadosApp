@@ -1,39 +1,54 @@
-<h1>Login</h1>
+<div class="container">
+  <div class="container-login">
 
-<form (submit)="iniciarSesion()">
-  <div>
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" name="usuario">
+    <form (submit)="iniciarSesion()">
+      <h1>Login</h1>
+      <h4>Entra tus credenciales</h4>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario:</mat-label>
+          <input matInput type="text" id="usuario" name="usuario">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña:</mat-label>
+          <input matInput type="password" id="password" name="password">
+        </mat-form-field>
+      </div>
+      <button mat-raised-button type="submit">Iniciar sesión</button>
+    </form>
   </div>
-  <div>
-    <label for="password">Contraseña:</label>
-    <input type="password" id="password" name="password">
-  </div>
-  <button type="submit">Iniciar sesión</button>
-</form>
 
-<h2>Registro</h2>
+  <h2>Registro</h2>
 
-<form (submit)="registrar()">
-  <div>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre">
-  </div>
-  <div>
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" name="correo">
-  </div>
-  <div>
-    <label for="password2">Contraseña:</label>
-    <input type="password" id="password2" name="password2">
-  </div>
-  <button type="submit">Registrar</button>
-</form>
+  <form (submit)="registrar()">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre:</mat-label>
+        <input matInput type="text" id="nombre" name="nombre">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo electrónico:</mat-label>
+        <input matInput type="email" id="correo" name="correo">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña:</mat-label>
+        <input matInput type="password" id="password2" name="password2">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button type="submit">Registrar</button>
+  </form>
 
-<div *ngIf="!registrado">
-  <button (click)="registrado = true">Crear una cuenta nueva</button>
-</div>
+  <div *ngIf="!registrado">
+    <button mat-raised-button color="primary" (click)="registrado = true">Crear una cuenta nueva</button>
+  </div>
 
-<div *ngIf="registrado">
-  <button (click)="registrado = false">Iniciar sesión</button>
+  <div *ngIf="registrado">
+    <button mat-raised-button color="primary" (click)="registrado = false">Iniciar sesión</button>
+  </div>
 </div>
