@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="container-register">
+
+    <form >
+      <h1>Registro</h1>
+      <h4>Entra tus Datos</h4>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre:</mat-label>
+          <input matInput type="text" id="nombre" name="nombre">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Apellido:</mat-label>
+          <input matInput type="text" id="apellido" name="apellido">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario:</mat-label>
+          <input matInput type="text" id="usuario" name="usuario">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Email:</mat-label>
+          <input matInput type="email" id="email" name="email">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña:</mat-label>
+          <input matInput type="password" id="password" name="password">
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button type="submit">Confirmar Registro</button>
+      <div>
+        <button mat-raised-button color="accent" (click)="volverLogin()">Volver al Login!</button>
+      </div>
+    </form>
+  </div>
+</div>

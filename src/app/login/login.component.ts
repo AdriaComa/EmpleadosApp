@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
+
 
 @Component({
   selector: 'app-login',
@@ -30,31 +32,9 @@ export class LoginComponent {
     }
   }
 
-  registrar() {
-    if (this.nombre.trim() === '' || this.correo.trim() === '' || this.password2.trim() === '') {
-      alert('Por favor ingrese todos los campos');
-      return;
-    }
-
-    if (this.password2.length < 6) {
-      alert('La contraseña debe tener al menos 6 caracteres');
-      return;
-    }
-
-    //FALTA validar REGISTROS
-    localStorage.setItem('usuarios', JSON.stringify([
-      ...JSON.parse(localStorage.getItem('usuarios') || '[]'),
-      {
-        nombre: this.nombre,
-        correo: this.correo,
-        contrasena: this.password2
-      }
-    ]));
-
-    alert('Usuario registrado exitosamente');
-    this.nombre = '';
-    this.correo = '';
-    this.password2 = '';
+  register(){
+    this.router.navigate(['/register']);
   }
+
 }
 

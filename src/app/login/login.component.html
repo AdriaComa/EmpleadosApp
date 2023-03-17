@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <div class="container">
   <div class="container-login">
 
@@ -17,38 +19,9 @@
         </mat-form-field>
       </div>
       <button mat-raised-button type="submit">Iniciar sesión</button>
+      <div>
+        <button mat-raised-button color="accent" (click)="register()" >¿No estás registrado? ¡Regístrate aquí!</button>
+      </div>
     </form>
-  </div>
-
-  <h2>Registro</h2>
-
-  <form (submit)="registrar()">
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Nombre:</mat-label>
-        <input matInput type="text" id="nombre" name="nombre">
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Correo electrónico:</mat-label>
-        <input matInput type="email" id="correo" name="correo">
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Contraseña:</mat-label>
-        <input matInput type="password" id="password2" name="password2">
-      </mat-form-field>
-    </div>
-    <button mat-raised-button type="submit">Registrar</button>
-  </form>
-
-  <div *ngIf="!registrado">
-    <button mat-raised-button color="primary" (click)="registrado = true">Crear una cuenta nueva</button>
-  </div>
-
-  <div *ngIf="registrado">
-    <button mat-raised-button color="primary" (click)="registrado = false">Iniciar sesión</button>
   </div>
 </div>
