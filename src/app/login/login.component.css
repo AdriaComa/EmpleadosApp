@@ -19,11 +19,11 @@ body {
 
 .container-login{
   background-color: ghostwhite;
-  margin: 5px;
+  margin: 15px;
   padding: 10px;
   display: flex;
-  height: 400px;
-  width: 300px;
+  height: 500px;
+  width: 350px;
   justify-content: center;
   border-style: groove;
   border-radius: 10%;
@@ -47,10 +47,12 @@ form > div {
 
 button[type="submit"] {
   margin-top: 20px;
+  padding: 10px;
 }
 
 button {
   margin-top: 20px;
+  padding: 20px;
 }
 
 button:focus {

@@ -2,4 +2,6 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
+body {
+  background-image: url(../src/assets/fondolluvia.jpg)
+}
