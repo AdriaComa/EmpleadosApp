@@ -7,18 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  esAdmin: boolean = false;
 
-  constructor(private router: Router) {
-    const usuarioActual = localStorage.getItem('usuarioActual');
-    if (usuarioActual === 'admin') {
-      this.esAdmin = true;
-    }
-  }
 
-  cerrarSesion() {
-    localStorage.removeItem('usuarioActual');
-    this.router.navigate(['/login']);
-  }
+  constructor(private router: Router) {}
+
 
 }

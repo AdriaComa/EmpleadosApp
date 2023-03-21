@@ -3,44 +3,38 @@
 <div class="container">
   <div class="container-register">
 
-    <form >
-      <h1>Registro</h1>
-      <h4>Entra tus Datos</h4>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Nombre:</mat-label>
-          <input matInput type="text" id="nombre" name="nombre">
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Apellido:</mat-label>
-          <input matInput type="text" id="apellido" name="apellido">
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Usuario:</mat-label>
-          <input matInput type="text" id="usuario" name="usuario">
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Email:</mat-label>
-          <input matInput type="email" id="email" name="email">
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Contraseña:</mat-label>
-          <input matInput type="password" id="password" name="password">
-        </mat-form-field>
-      </div>
+    <form>
+      <h2>Registro</h2><br>
+      <h4>Nombre:</h4>
+      <mat-form-field>
+        <mat-label></mat-label>
+        <input matInput type="text" name="nombre" required>
+      </mat-form-field>
+      <h4>Apellido:</h4>
+      <mat-form-field>
+        <mat-label></mat-label>
+        <input matInput type="text" name="apellido" required>
+      </mat-form-field>
+      <h4>Usuario:</h4>
+      <mat-form-field>
+        <mat-label></mat-label>
+        <input matInput type="text" name="usuario" required>
+      </mat-form-field>
+      <h4>Email:</h4>
+      <mat-form-field>
+        <mat-label></mat-label>
+        <input matInput type="email" name="email" required>
+      </mat-form-field>
+      <h4>Contraseña:</h4>
+      <mat-form-field>
+        <mat-label></mat-label>
+        <input matInput type="password" name="password" required>
+      </mat-form-field>
 
-      <button mat-raised-button type="submit">Confirmar Registro</button>
-      <div>
-        <button mat-raised-button color="accent" (click)="volverLogin()">Volver al Login!</button>
-      </div>
+      <button mat-raised-button color="primary" type="submit" (click)="register()">Registrarse</button>
+
+      <button mat-raised-button color="accent" (click)="volverLogin()">Volver al Login!</button>
     </form>
+
   </div>
 </div>
