@@ -1,6 +1,63 @@
-<h1>Bienvenido</h1>
-
-<p >Eres administrador</p>
-<p >Eres empleado</p>
-
-<button mat-raised-button color="primary" (click)="logout()">Cerrar Sesión</button>
+<div class="container-fluid">
+  <div class="row">
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav>
+        <!-- Vista lateral de información del trabajador -->
+        <mat-nav-list>
+          <h3 matSubheader>Información del trabajador</h3>
+          <mat-list-item>
+            <p>Nombre: </p>
+          </mat-list-item>
+          <mat-list-item>
+            <p>Correo electrónico: </p>
+          </mat-list-item>
+          <mat-list-item>
+            <p>Cargo: </p>
+          </mat-list-item>
+          <!-- Aquí puedes agregar más información del trabajador -->
+        </mat-nav-list>
+        <!-- Aquí puedes agregar más opciones en la vista lateral -->
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <mat-toolbar color="primary">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button>
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <!-- Aquí puedes agregar el título del menú -->
+        </mat-toolbar>
+        <nav mat-tab-nav-bar>
+          <!-- Aquí puedes agregar los enlaces a las diferentes secciones de la aplicación -->
+        </nav>
+        <div class="content-wrapper">
+          <!-- Tabla de tareas debajo del menú -->
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Tabla de tareas</h4>
+              <table mat-table class="mat-elevation-z8">
+                <ng-container matColumnDef="tarea">
+                  <th mat-header-cell *matHeaderCellDef>Tarea</th>
+                  <td mat-cell *matCellDef="let tarea"></td>
+                </ng-container>
+                <ng-container matColumnDef="descripcion">
+                  <th mat-header-cell *matHeaderCellDef>Descripción</th>
+                  <td mat-cell *matCellDef="let tarea"></td>
+                </ng-container>
+                <ng-container matColumnDef="fechaLimite">
+                  <th mat-header-cell *matHeaderCellDef>Fecha límite</th>
+                  <td mat-cell *matCellDef="let tarea"></td>
+                </ng-container>
+                <ng-container matColumnDef="estado">
+                  <th mat-header-cell *matHeaderCellDef>Estado</th>
+                  <td mat-cell *matCellDef="let tarea"></td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  <button mat-raised-button color="primary" (click)="logout()">Cerrar Sesión</button>
+</div>
